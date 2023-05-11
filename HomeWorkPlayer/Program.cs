@@ -4,7 +4,7 @@ namespace HomeWorkPlayer
 {
     class Program
     {
-        static void Main()
+        public void Main()
         {
             Player player1 = new Player(18, "ViCoffee","Man","Dwarf");
 
@@ -14,26 +14,28 @@ namespace HomeWorkPlayer
 
     class Player
     {
-        public string Nickname;
-        public string Gender;
-        public string PlayerClass;
+        private string _nickname;
+        private string _gender;
+        private string _gameClass;
 
-        public int Age;
+        private int _age;
 
-        public Player(int age, string nickname, string gender, string playerClass)
+        public Player(int age, string nickname, string gender, string gameClass)
         {
-            Nickname = nickname;
-            Gender = gender;
-            PlayerClass = playerClass;
-            Age = age;
+            _nickname = nickname;
+            _gender = gender;
+            _gameClass = gameClass;
+            _age = age;
         }
 
         public void ShowInfo()
         {
-            Console.WriteLine($"Information about player:\nNickname is {Nickname}" +
-                $"\nGender is {Gender}" +
-                $"\nPlayer class is {PlayerClass}" +
-                $"\nAge is {Age} years old");
+            Console.WriteLine($"Information about player:\nNickname is {_nickname}" +
+                $"\nGender is {_gender}" +
+                $"\nPlayer class is {_gameClass}" +
+                $"\nAge is {_age} years old");
         }
+
+
     }
 }
